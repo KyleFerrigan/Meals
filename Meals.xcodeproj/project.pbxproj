@@ -3,24 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		FD7721EA2C1A1E7E004AE43B /* MealsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7721E92C1A1E7E004AE43B /* MealsApp.swift */; };
-		FD7721EC2C1A1E7E004AE43B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7721EB2C1A1E7E004AE43B /* ContentView.swift */; };
+		FD7721EC2C1A1E7E004AE43B /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7721EB2C1A1E7E004AE43B /* MealDetailView.swift */; };
 		FD7721EE2C1A1E7F004AE43B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7721ED2C1A1E7F004AE43B /* Assets.xcassets */; };
 		FD7721F22C1A1E7F004AE43B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7721F12C1A1E7F004AE43B /* Preview Assets.xcassets */; };
+		FD7722062C1A5EC3004AE43B /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7722052C1A5EC3004AE43B /* MealsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD7721E62C1A1E7E004AE43B /* Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7721E92C1A1E7E004AE43B /* MealsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsApp.swift; sourceTree = "<group>"; };
-		FD7721EB2C1A1E7E004AE43B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FD7721EB2C1A1E7E004AE43B /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		FD7721ED2C1A1E7F004AE43B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD7721EF2C1A1E7F004AE43B /* Meals.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Meals.entitlements; sourceTree = "<group>"; };
 		FD7721F12C1A1E7F004AE43B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FD7722052C1A5EC3004AE43B /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FD7722012C1A1FE4004AE43B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Meal.swift,
+				MealsViewModel.swift,
+			);
+			target = FD7721E52C1A1E7E004AE43B /* Meals */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FD7721F82C1A1F79004AE43B /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FD7722012C1A1FE4004AE43B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FD7721E32C1A1E7E004AE43B /* Frameworks */ = {
@@ -53,7 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				FD7721E92C1A1E7E004AE43B /* MealsApp.swift */,
-				FD7721EB2C1A1E7E004AE43B /* ContentView.swift */,
+				FD7722052C1A5EC3004AE43B /* MealsView.swift */,
+				FD7721EB2C1A1E7E004AE43B /* MealDetailView.swift */,
+				FD7721F82C1A1F79004AE43B /* Models */,
 				FD7721ED2C1A1E7F004AE43B /* Assets.xcassets */,
 				FD7721EF2C1A1E7F004AE43B /* Meals.entitlements */,
 				FD7721F02C1A1E7F004AE43B /* Preview Content */,
@@ -139,7 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD7721EC2C1A1E7E004AE43B /* ContentView.swift in Sources */,
+				FD7722062C1A5EC3004AE43B /* MealsView.swift in Sources */,
+				FD7721EC2C1A1E7E004AE43B /* MealDetailView.swift in Sources */,
 				FD7721EA2C1A1E7E004AE43B /* MealsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,19 +304,20 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KyleFerrigan.Meals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				XROS_DEPLOYMENT_TARGET = "$(RECOMMENDED_XROS_DEPLOYMENT_TARGET)";
 			};
 			name = Debug;
 		};
@@ -323,19 +344,20 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KyleFerrigan.Meals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				XROS_DEPLOYMENT_TARGET = "$(RECOMMENDED_XROS_DEPLOYMENT_TARGET)";
 			};
 			name = Release;
 		};
